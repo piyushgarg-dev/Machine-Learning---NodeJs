@@ -96,7 +96,7 @@ module.exports = function(string) {
     output: item.journal
   }));
   network.train(train, {
-    iterations: 510,
+    iterations: 110,
     log: err => console.log(err)
   });
 
