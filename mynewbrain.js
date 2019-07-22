@@ -74,8 +74,8 @@ module.exports = function(string) {
       journal: "creditor,cash"
     },
     {
-        entry: "paid money to creditors",
-        journal: "creditor,cash"
+      entry: "paid money to creditors",
+      journal: "creditor,cash"
     },
     {
       entry: "issued bills of exchange to debtor",
@@ -96,7 +96,7 @@ module.exports = function(string) {
     output: item.journal
   }));
   network.train(train, {
-    iterations: 210,
+    iterations: 410,
     log: err => console.log(err)
   });
 
