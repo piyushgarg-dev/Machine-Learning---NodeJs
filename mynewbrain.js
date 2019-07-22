@@ -25,7 +25,64 @@ module.exports = function(string){
             entry:'paid salaries',
             journal:'salarytocash'
         },
-        
+        {
+            entry:'invested capital in business',
+            journal:'cashtocapital'
+        },
+        {
+            entry:'purchased goods',
+            journal:'purchasestocash'
+        },
+        {
+            entry:'purchased goods on credit',
+            journal:'purchasestocreditor'
+        },
+        {
+            entry:'sold goods for cash',
+            journal:'cashtosales'
+        },
+        {
+            entry:'sold goods on credit',
+            journal:'debtortosales'
+        },
+       {
+           entry:'deposited money in bank’',
+           journal:'banktocash'
+       },
+       {
+        entry:'introduced additional capital',
+        journal:'cashtocapital'
+    },
+    {
+        entry:'purchased furniture ',
+        journal:'furnituretocash'
+    },
+    {
+        entry:'withdrawn money for personal use',
+        journal:'drawingstocash'
+    },
+    {
+        entry:'payment made by debtor',
+        journal:'cashtodebtor'
+    },
+    {
+        entry:'payment made to creditor',
+        journal:'payment made to creditor'
+    },
+    {
+        entry:'issued bills of exchange to debtor',
+        journal:'billreceivablestodebtor'
+    },
+    {
+        entry:'endorsed bills receiveable to creditor',
+        journal:'creditortobillsreceivable'
+    },
+    {
+        entry:'discounting bills receivables ',
+        journal:'banktobillsreceivable'
+    },
+   
+
         
     ];
      
