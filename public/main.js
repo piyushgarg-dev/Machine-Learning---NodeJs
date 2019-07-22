@@ -30,7 +30,7 @@ auto.addEventListener("submit", e => {
     query
   };
   console.log(d);
-
+  document.getElementById("btn").value = "Please Wait";
   fetch("/auto", {
     method: "POST",
     headers: {
@@ -41,9 +41,10 @@ auto.addEventListener("submit", e => {
     .then(res => res.json())
     .then(data => {
       console.log(data);
-      const entry = data.split('to');
+      const entry = data.split("to");
       console.log(entry);
       debit.value = entry[0];
       credit.value = entry[1];
+      document.getElementById("btn").value = "Generate";
     });
 });
