@@ -4,7 +4,7 @@ const app = express();
 const mybrain = require("./mybrain");
 const mynewbrain = require('./mynewbrain');
 const bodyparser = require('body-parser');
-const PORT = 3030;
+const PORT = process.env.PORT ||3030;
 
 app.use(express.json());
 app.use(bodyparser.urlencoded());
