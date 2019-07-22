@@ -1,0 +1,17 @@
+{
+  "name": "sample-ml",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "brain.js": "^1.6.1",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.1"
+  }
+}
