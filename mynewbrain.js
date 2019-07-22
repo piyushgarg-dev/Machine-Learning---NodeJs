@@ -10,41 +10,29 @@ app.use(bodyparser.json());
 
 module.exports = function(string){
     this.string = string;
-    console.log('Class',string)
+    console.log('Class2',string)
     const network = new brain.recurrent.LSTM();
     const trainingdata = [
-    
         {
-            text:[
-                'cash',
-                'Furniture'
-            ],
-            output:'Real Account'
+            entry:'sold furniture on cash',
+            journal:'cashtofurniture'
         },
         {
-            text:[
-                'Cash',
-                'Interest'
-            ],
-            output:'Nominal Account'
+            entry:'paid salary',
+            journal:'salarytocash'
         },
         {
-            text:[
-                'cash',
-                'interest'
-            ],
-            output:'Nominal Account'
+            entry:'paid salaries',
+            journal:'salarytocash'
         },
-
-        
         
         
     ];
      
     
     const train = trainingdata.map(item=>({
-        input:item.text,
-        output:item.output
+        input:item.entry,
+        output:item.journal
     }));
     network.train(train,{
         iterations:2000
