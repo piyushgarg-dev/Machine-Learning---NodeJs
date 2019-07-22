@@ -41,7 +41,7 @@ auto.addEventListener("submit", e => {
     .then(res => res.json())
     .then(data => {
       console.log(data);
-      const entry = data.split("to");
+      const entry = data.split(",");
       console.log(entry);
       debit.value = entry[0];
       credit.value = entry[1];

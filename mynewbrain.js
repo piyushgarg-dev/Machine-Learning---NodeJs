@@ -15,71 +15,71 @@ module.exports = function(string){
     const trainingdata = [
         {
             entry:'sold furniture on cash',
-            journal:'cashtofurniture'
+            journal:'cash,furniture'
         },
         {
             entry:'paid salary',
-            journal:'salarytocash'
+            journal:'salary,cash'
         },
         {
             entry:'paid salaries',
-            journal:'salarytocash'
+            journal:'salary,cash'
         },
         {
             entry:'invested capital in business',
-            journal:'cashtocapital'
+            journal:'cash,capital'
         },
         {
             entry:'purchased goods',
-            journal:'purchasestocash'
+            journal:'purchases,cash'
         },
         {
             entry:'purchased goods on credit',
-            journal:'purchasestocreditor'
+            journal:'purchases,creditor'
         },
         {
             entry:'sold goods for cash',
-            journal:'cashtosales'
+            journal:'cash,sales'
         },
         {
             entry:'sold goods on credit',
-            journal:'debtortosales'
+            journal:'debtor,sales'
         },
        {
            entry:'deposited money in bank’',
-           journal:'banktocash'
+           journal:'bank,cash'
        },
        {
         entry:'introduced additional capital',
-        journal:'cashtocapital'
+        journal:'cash,capital'
     },
     {
         entry:'purchased furniture ',
-        journal:'furnituretocash'
+        journal:'furniture,cash'
     },
     {
         entry:'withdrawn money for personal use',
-        journal:'drawingstocash'
+        journal:'drawings,cash'
     },
     {
         entry:'payment made by debtor',
-        journal:'cashtodebtor'
+        journal:'cash,debtor'
     },
     {
         entry:'payment made to creditor',
-        journal:'payment made to creditor'
+        journal:'creditor,cash'
     },
     {
         entry:'issued bills of exchange to debtor',
-        journal:'billreceivablestodebtor'
+        journal:'billreceivables,debtor'
     },
     {
         entry:'endorsed bills receiveable to creditor',
-        journal:'creditortobillsreceivable'
+        journal:'creditor,billsreceivable'
     },
     {
         entry:'discounting bills receivables ',
-        journal:'banktobillsreceivable'
+        journal:'bank,billsreceivable'
     },
    
 
@@ -92,7 +92,8 @@ module.exports = function(string){
         output:item.journal
     }));
     network.train(train,{
-        iterations:2000
+        iterations:200,
+        log: err=>console.log(err)
     });
 
     
